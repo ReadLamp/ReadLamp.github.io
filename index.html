@@ -91,14 +91,6 @@
       }
     }
   </script>
-  <script>
-    var returnUrl = window.location.href;
-    var hasValidated = localStorage.getItem("hasValidated");
-    if (!hasValidated) {
-        localStorage.setItem("hasValidated", true);
-        window.location.href = "./password.html?returnUrl=" + encodeURIComponent(returnUrl);
-    }
-   </script>
 
 
 </body>
