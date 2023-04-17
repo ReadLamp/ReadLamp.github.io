@@ -36,7 +36,7 @@
       transform: translateY(2px);
       box-shadow: none;
     }
-    a {
+    .link {
       display: block;
       margin: 20px auto;
       width: 200px;
@@ -49,7 +49,7 @@
       border-radius: 10px;
     }
 
-    a {
+    .link {
       text-decoration: none;
       background-image: linear-gradient(to right, #4e54c8, #8f94fb);
       background-size: 100% 0.2em;
@@ -60,7 +60,36 @@
       transition: all 0.3s ease-in-out;
     }
 
-    a:hover {
+    .link:hover {
+      background-size: 100% 100%;
+      color: white;
+    }
+
+    .none {
+      display: block;
+      margin: 20px auto;
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 20px;
+      text-decoration: none;
+      color: #0a0f30;
+      background-color: #c4ecffb3;
+      border-radius: 10px;
+    }
+
+    .none {
+      text-decoration: none;
+      background-image: linear-gradient(to right, #ff6768, #ffdd88);
+      background-size: 100% 0.2em;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      color: black;
+      padding-bottom: 0.2em;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .none:hover {
       background-size: 100% 100%;
       color: white;
     }
@@ -69,60 +98,164 @@
       display:inline-block;      
     }
     .mt a, .mt{
-      margin-top: 0px;
+      margin-top: 20px;
     }
     .mb a, .mb{
       margin-bottom: 0px;
+    }
+
+    /*.container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .box {
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .left-box {
+      width: 60%;
+      text-align: center;
+      margin-right: 10px;
+    }*/
+
+    /*右半部分样式*/
+
+    ul {
+      padding-inline-start: 0;
+    }
+    li {
+      list-style: none;
+      position: relative;
+      margin-bottom: 0.5em;
+      font-family: sans-serif;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 隐藏勾选框 */
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    /* 重新设置标签样式 */
+    label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 设置圆圈伪元素的样式 */
+    label::before {
+      content: "";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      border: 2px solid #CCC;
+      border-radius: 50%;
+      margin-right: 0.5em;
+    }
+
+    /* 设置选中状态圆圈伪元素的样式 */
+    input[type="checkbox"]:checked ~ label::before {
+      background-color: #7075e3;
+      border-color: #7075e3;
+    }
+
+    /* 设置选中状态的标签样式 */
+    input[type="checkbox"]:checked ~ label + span {
+      color: #888;
+      text-decoration: line-through;
+    }
+    /* 定义勾选样式 */  
+
+    .test {
+      display: block;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      padding: 1px 10px;
+      margin-top: 20px;
     }
 
   </style>
 </head>
 
 <body>
-  <div class="search-engines">
-    <div class="double-block mb">
-      <a class="link" href="https://www.r8.chat/" target="_blank">ChatGPT</a>
-      <a class="link" href="https://github.com/xx025/carrot" target="_blank">😄Free GPT</a>
-      <a class="link" href="https://flowus.cn/readlamp/26122959-04db-494e-9acf-adb77f9aab39" target="_blank">使用指南</a>
+  <div class="container">
+    <!-- 左边的内容 -->
+    <div class="box left-box">
+      <div class="search-engines">
+        <div class="double-block mb">
+          <a class="link" href="https://www.r8.chat/" target="_blank">ChatGPT</a>
+          <a class="none" href="https://github.com/xx025/carrot" target="_blank">😄Free GPT</a>
+          <a class="none" href="https://flowus.cn/readlamp/26122959-04db-494e-9acf-adb77f9aab39" target="_blank">使用指南</a>
+        </div>
+
+        <div class="double-block mb">
+          <a class="link" href="https://wantwords.net/" target="_blank">反向词典</a>
+          <a class="none" href="https://wantquotes.net/" target="_blank">据意查句</a>
+        </div>
+
+        <div class="double-block mb">
+          <a class="link" href="https://www.dida365.com/webapp/#q/all/today" target="_blank">滴答清单</a>
+          <a class="none" href="https://flowus.cn/ceab1521-bb46-4fc8-9507-569e0c42e3c2" target="_blank">日志指南</a>
+        </div>
+        
+
+        <div class="double-block mb">      
+          <a class="link" href="https://flowus.cn/keao/81adbee1-5887-4e46-aba7-848aa7325849" target="_blank">Daily TODO</a>
+          <a class="none" href="https://docs.qq.com/sheet/DVE1ValB2cHBRdGh5?tab=8fobbt&u=c959bbd7b30d48cb8c0c0e7a22a4fcb8" target="_blank">订单附属情况查询</a>
+        </div>
+        
+
+        <div class="double-block mb">      
+          <a class="link" href="https://docs.qq.com/sheet/DSVh0Y2lBRGJzVnpv?tab=knavsg&amp;u=c959bbd7b30d48cb8c0c0e7a22a4fcb8" target="_blank">2023年会议</a>
+          <a class="link" href="https://docs.qq.com/sheet/DY0N6aFJIakNTVkVE?rtime=1550557679069&amp;ADUIN=1071904235&amp;ADSESSION=1554166557&amp;ADTAG=CLIENT.QQ.5599_.0&amp;ADPUBNO=26866&amp;tab=tqx03z&amp;_t=1678848605301&amp;=undefined&amp;needShowTips=1&amp;u=c959bbd7b30d48cb8c0c0e7a22a4fcb8" target="_blank">往年会议</a>
+          <a class="none" href="https://docs.qq.com/sheet/DUEFUT2NGWnprcHFh?tab=xrxjlo&friendUin=mQrj%25252Bhn9DUBxiIOqwdklyQ%25253D%25253D&ADUIN=2309118978&ADSESSION=1680586344&ADTAG=CLIENT.QQ.5959_.0&ADPUBNO=27288&&u=6614d23ba20a4a19bddb8dcf2efe0184" target="_blank">一组会议</a>
+        </div>
+
+        <div class="double-block mb">
+          <a class="link" href="https://www.ais.cn/attendees" target="_blank">艾思科蓝</a>
+          <a class="link" href="https://bi.ais.cn/crm/private/list" target="_blank">BI系统</a>
+          <a class="link" href="https://e.ais.cn/sale/order/paper" target="_blank">数字化系统</a>
+        </div>
+      </div>
+      <button class="button1 mt" onclick="openSearchEngines()">Quick Start</button>
     </div>
 
-    <div class="double-block mb">
-      <a class="link" href="https://wantwords.net/" target="_blank">反向词典</a>
-      <a class="link" href="https://wantquotes.net/" target="_blank">据意查句</a>
+    <!-- 右边的内容 -->
+    <!--
+    <div class="box right-box">
+      <div class="test">
+        <ul>
+          <li>
+            <input type="checkbox" id="task1">
+            <label for="task1"></label>
+            <span>【跟进】企微置顶事项提醒</span>
+          </li>
+          <li>
+            <input type="checkbox" id="task2">
+            <label for="task2"></label>
+            <span>【跟进】数字化刷新状态</span>
+          </li>
+          <li>
+            <input type="checkbox" id="task3">
+            <label for="task3"></label>
+            <span>【跟进】企微标签待跟进</span>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <div class="double-block mb">
-      <a class="link" href="https://www.dida365.com/webapp/#q/all/today" target="_blank">滴答清单</a>
-      <a class="link" href="https://flowus.cn/ceab1521-bb46-4fc8-9507-569e0c42e3c2" target="_blank">日志指南</a>
-    </div>
-    
-
-    <div class="double-block mb">      
-      <a class="link" href="https://flowus.cn/keao/81adbee1-5887-4e46-aba7-848aa7325849" target="_blank">Daily TODO</a>
-    </div>
-    
-    <a class="link mb" href="https://docs.qq.com/sheet/DVE1ValB2cHBRdGh5?tab=8fobbt&u=c959bbd7b30d48cb8c0c0e7a22a4fcb8" target="_blank">订单附属情况查询</a>
-
-    <div class="double-block mb">      
-      <a class="link" href="https://docs.qq.com/sheet/DSVh0Y2lBRGJzVnpv?tab=knavsg&amp;u=c959bbd7b30d48cb8c0c0e7a22a4fcb8" target="_blank">2023年会议</a>
-      <a class="link" href="https://docs.qq.com/sheet/DY0N6aFJIakNTVkVE?rtime=1550557679069&amp;ADUIN=1071904235&amp;ADSESSION=1554166557&amp;ADTAG=CLIENT.QQ.5599_.0&amp;ADPUBNO=26866&amp;tab=tqx03z&amp;_t=1678848605301&amp;=undefined&amp;needShowTips=1&amp;u=c959bbd7b30d48cb8c0c0e7a22a4fcb8" target="_blank">往年会议</a>
-      <a class="link" href="https://docs.qq.com/sheet/DUEFUT2NGWnprcHFh?tab=xrxjlo&friendUin=mQrj%25252Bhn9DUBxiIOqwdklyQ%25253D%25253D&ADUIN=2309118978&ADSESSION=1680586344&ADTAG=CLIENT.QQ.5959_.0&ADPUBNO=27288&&u=6614d23ba20a4a19bddb8dcf2efe0184" target="_blank">一组会议</a>
-    </div>
-
-    <div class="double-block">
-      <a class="link" href="https://www.ais.cn/attendees" target="_blank">艾思科蓝</a>
-      <a class="link" href="https://bi.ais.cn/crm/private/list" target="_blank">BI系统</a>
-      <a class="link" href="https://e.ais.cn/sale/order/paper" target="_blank">数字化系统</a>
-    </div>
-  </div>
-  <button class="button1" onclick="openSearchEngines()">Quick Start</button>
+  </div> 
+  -->
 
   <br><br><br><br><br>
   <hr>
 
   <footer>
-    <p>最近更新：2023年4月12日 </p>
-    <p><a href="https://github.com/ReadLamp/ReadLamp.github.io/tree/main" target="_blank">GitHub 链接</a></p>
+    <p>最近更新：2023年4月17日 </p>
+    <p><a class="none" href="https://github.com/ReadLamp/ReadLamp.github.io/tree/main" target="_blank">GitHub 链接</a></p>
   </footer>
 
   <script>
@@ -132,6 +265,17 @@
         window.open(links[i].href);
       }
     }
+
+    const tasks = document.querySelectorAll('input[type="checkbox"]');
+    tasks.forEach(task => {
+      task.addEventListener('change', () => {
+        if (task.checked) {
+          task.parentNode.classList.add('completed');
+        } else {
+          task.parentNode.classList.remove('completed');
+        }
+      });
+    });
   </script>
 </body>
 
